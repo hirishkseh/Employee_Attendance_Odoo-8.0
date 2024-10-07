@@ -1,0 +1,25 @@
+<openerp>
+  <data>
+    <!-- Actions for menus -->
+    <record id="action_employee_attendance" model="ir.actions.act_window">
+      <field name="name">Attendance</field>
+      <field name="res_model">employee.attendance</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_employee_list" model="ir.actions.act_window">
+      <field name="name">Employees</field>
+      <field name="res_model">hr.employee</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Main Menu Item -->
+    <menuitem id="menu_employee_attendance_root" name="Employee Attendance" parent="hr.menu_hr_root"/>
+
+    <!-- Submenu Items -->
+    <menuitem id="menu_employee_attendance" name="Attendance" parent="menu_employee_attendance_root" action="action_employee_attendance"/>
+    <menuitem id="menu_employee_list" name="Employees" parent="menu_employee_attendance_root" action="action_employee_list"/>
+  </data>
+</openerp>
